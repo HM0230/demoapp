@@ -9,3 +9,7 @@
 </label><br/>
 <app-son-comp [childDataName]='fatherData'></app-son-comp>
 <p style="color:yellowgreen">父子通信(子 => 父)</p>
+<label>父组件:
+  <input type="text" [(ngModel)]="datafromChild">
+</label><br/>
+<app-son-comp-two (dataUpdate)='getParams($event)'></app-son-comp-two>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter ,Output } from '@angular/core';
 
 @Component({
   selector: 'app-son-comp-two',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./son-comp-two.component.css']
 })
 export class SonCompTwoComponent implements OnInit {
-
-  constructor() { }
-
+  @Output() dataUpdate:EventEmitter<any> = new EventEmitter<any>();
+  childDataName: string = "I'm from child component";
+  constructor() {
+  }
   ngOnInit() {
   }
-
+  childDataChange(){
+    this.dataUpdate.emit({
+      "childDataName":this.childDataName
+    });
+  }
 }

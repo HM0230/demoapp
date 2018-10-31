@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page01Component implements OnInit {
   fatherData: string = "I'm from father component";
+  datafromChild:string;
   user : object={
     uid:1,
     uname:'tom'
@@ -14,5 +15,8 @@ export class Page01Component implements OnInit {
   constructor() { }
   ngOnInit() {
   }
-
+  getParams(pramas){
+    this.datafromChild=pramas.childDataName;
+    // console.log(pramas);
+  }
 }

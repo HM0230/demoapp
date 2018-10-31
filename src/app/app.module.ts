@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms'
+import {JsonpModule} from "@angular/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +24,8 @@ import { SonCompTwoComponent } from './components/page01/son-comp-two/son-comp-t
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    JsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
