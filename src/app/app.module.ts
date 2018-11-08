@@ -11,6 +11,7 @@ import {Page02Component} from './components/page02/page02.component'
 import {Page03Component} from './components/page03/page03.component';
 import { SonCompComponent } from './components/page01/son-comp/son-comp.component';
 import { SonCompTwoComponent } from './components/page01/son-comp-two/son-comp-two.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SonCompTwoComponent } from './components/page01/son-comp-two/son-comp-t
     Page03Component,
     SonCompComponent,
     SonCompTwoComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
