@@ -20,14 +20,19 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
             "scripts": [
-              "./node_modules/gif.js/dist/gif.js",
-              "./node_modules/gif.js/dist/gif.worker.js"
+              "src/assets/js/gif.js"
             ]
           },
           "configurations": {

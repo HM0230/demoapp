@@ -1,0 +1,31 @@
+<button nz-button nzType="primary" (click)="showModal()">
+  <span>Show Modal</span>
+</button>
+<nz-modal [(nzVisible)]="isVisible" [nzTitle]="modalTitle" [nzContent]="modalContent" [nzFooter]="modalFooter" (nzOnCancel)="handleCancel()">
+  <ng-template #modalTitle>
+    创建GIF
+  </ng-template>
+
+  <ng-template #modalContent>
+    <div class="imgSty">
+      <div class="dark_left" [style.width]='ratioC=="10:8"?"30px":(ratioC=="1:1"?"60px":"")'></div>
+      <div>
+        <img src="http://tupian.qqjay.com/u/2017/1118/1_162252_8.jpg" alt="">
+      </div>
+      <div class="dark_right" [style.width]='ratioC=="10:8"?"30px":(ratioC=="1:1"?"60px":"")'></div>
+    </div>
+    <div class="setParameter">
+      <div>
+        <li *ngFor="let item of ratio" [class]="ratioC==item?'selected':''" (click)="selectRatio(item)">{{item}}</li>
+      </div>
+      <div>
+        <li *ngFor="let i of speed" [class]="speedC==i?'selected':''" (click)="selectSpeed(i)">{{i}}</li>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #modalFooter>
+    <button class="btn" (click)="handleCancel()">取消</button>
+    <button class="btn" (click)="handleOk()" >下载</button>
+  </ng-template>
+</nz-modal>
