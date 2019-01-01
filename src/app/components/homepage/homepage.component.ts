@@ -48,10 +48,13 @@ export class HomepageComponent implements OnInit {
       }, 30)
     }
     console.log(gif);
+    var t =this;
     gif.on('finished', (blob)=> {
-      // this.gifUrl=URL.createObjectURL(blob);
-      // console.log('t01'+this.gifUrl)
-      // window.open(URL.createObjectURL(blob));
+      var gifUrl=URL.createObjectURL(blob);
+      const a = document.getElementById('giflink')
+      a.setAttribute('href',gifUrl);
+      a.setAttribute('download',gifUrl+'.gif');
+      a.click();
     });
     setTimeout(() => {
         gif.render();

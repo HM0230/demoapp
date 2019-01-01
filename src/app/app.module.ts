@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {Page01Component} from './components/page01/page01.component'
 import {Page02Component} from './components/page02/page02.component'
 import {Page03Component} from './components/page03/page03.component';
@@ -32,7 +32,8 @@ import { Test01Component } from './components/test01/test01.component';
     AppRoutingModule,
     JsonpModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
